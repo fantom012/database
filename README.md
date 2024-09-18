@@ -165,3 +165,20 @@ INSERT INTO "payments" ("payment_date", "amount", "payment_method", "order_id") 
 ('2024-09-03', 89.00, 'Debit Card', 3),
 ('2024-09-04', 45.75, 'Credit Card', 4);
 ````
+## **commandes**
+
+postgres=# SELECT * FROM product;
+ id |         name          |                    description                     | price  | stock | category_id
+----+-----------------------+----------------------------------------------------+--------+-------+-------------
+  1 | Smartphone            | Latest model with 5G capability                    | 699.99 |    50 |           1
+  2 | Science Fiction Novel | A gripping science fiction story.                  |  15.99 |   100 |           2
+  3 | Leather Jacket        | Stylish leather jacket for all seasons.            | 120.00 |    30 |           3
+  4 | Coffee Maker          | Automatic coffee maker with programmable settings. |  85.00 |    20 |           4
+
+postgres=# SELECT * FROM orders;
+ id | order_date | shipping_date |  status   | total_amount | user_id | shipping_address_id | category_id
+----+------------+---------------+-----------+--------------+---------+---------------------+-------------
+  1 | 2024-09-01 | 2024-09-03    | Shipped   |       199.99 |       1 |                   1 |           1
+  2 | 2024-09-02 | 2024-09-05    | Pending   |        25.50 |       2 |                   2 |           2
+  3 | 2024-09-03 | 2024-09-06    | Delivered |        89.00 |       3 |                   3 |           3
+  4 | 2024-09-04 | 2024-09-07    | Cancelled |        45.75 |       4 |                   4 |           4
